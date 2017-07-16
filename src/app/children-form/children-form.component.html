@@ -21,7 +21,7 @@
       </app-child-form>
     </div>
     <app-boolean-prompt
-      *ngIf="promptForAdditionalChildren"
+      *ngIf="promptForAdditionalChildren && children.length < 15"
       question="Do you have any other children?"
       (selectionChanged)="onHasOtherChildrenChanged($event)">
     </app-boolean-prompt>

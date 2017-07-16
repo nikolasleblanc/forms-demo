@@ -1,5 +1,5 @@
 <fieldset class="pa0 fieldset" [ngClass]="{ 'editMode': isLast && !saved, 'saved': saved, 'isLast': isLast }">
-  <div class="fl tr pr3" style="padding-right: 21px; width: 220px; padding-top: 10px" *ngIf="(showLegend || (isLast && saved))">
+  <div class="fl tr pr3" style="padding-right: 21px; width: 220px; padding-top: 8px" *ngIf="(showLegend || (isLast && saved))">
     <span class="b db legend" style="color: #616161; margin-bottom: 2px; font-size: 15px">{{ indexTranslations[childIndex] }} Child</span>
     <a style="color: #939ea3; cursor: pointer" (mouseover)="onRollOverRemove()" (click)="onRemoveChild()">Remove</a>
   </div>

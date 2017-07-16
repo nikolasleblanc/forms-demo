@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 const childObject = {};
 
+declare const document;
+
 @Component({
   selector: 'app-children-form',
   templateUrl: './children-form.component.html',
@@ -14,6 +16,7 @@ export class ChildrenFormComponent implements OnInit {
   savedChild: boolean = false;
 
   children: Array<any> = [];
+
   constructor() { }
 
   private seedChildren = () => {
@@ -32,7 +35,11 @@ export class ChildrenFormComponent implements OnInit {
       ...this.children.slice(0, i),
       ...this.children.slice(i + 1)
     ];
-    this.promptForAdditionalChildren = this.children.length === 1;
+    this.promptForAdditionalChildren = this.children.length >= 1;
+    if (this.children.length === 0) {
+      Array.from(document.querySelectorAll('input[type=radio]')).forEach((i: any) => i.checked = false);
+      this.savedChild = false;
+    }
   }
 
   onHasChildrenChanged = (event) => {

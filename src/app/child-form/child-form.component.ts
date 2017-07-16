@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Angulartics2Module } from 'angulartics2';
 
 @Component({
   selector: 'app-child-form',
@@ -19,8 +20,10 @@ export class ChildFormComponent implements OnInit {
     'Ninth',
     'Tenth',
     'Eleventh',
-    'Twelve',
-    'Thirteen'
+    'Twelfth',
+    'Thirteenth',
+    'Fourteenth',
+    'Fifteenth'
   ];
 
   saved: boolean = false;
