@@ -1,0 +1,7 @@
+<p class="dib question">Do you have any other children?</p>
+<div class="radio dib ml15">
+  <input id="otherChildren_yes" type="radio" name="otherChildren" value="true" (change)="hasOtherChildrenChanged.emit($event);">
+  <label for="otherChildren_yes" class="radioLabel">Yes</label>
+  <input id="otherChildren_no" #otherChildrenNo type="radio" name="otherChildren" value="false" (change)="hasOtherChildrenChanged.emit($event)">
+  <label for="otherChildren_no" class="radioLabel">No</label>
+</div>

@@ -1,0 +1,27 @@
+<div style="margin-left: 150px; width: 980px; margin-right: 150px">
+  <h1>Children</h1>
+  <div class="mb15">
+    <app-child-prompt
+      (hasChildrenChanged)="onHasChildrenChanged($event)">
+    </app-child-prompt>
+  </div>
+  <div *ngIf="children.length > 0">
+    <div  class="childFormContainer" [ngClass]="{ 'editMode': children.length === 1 && !savedChild }">
+      <h2>{{ children.length > 1 ? 'Children' : 'Child' }}</h2>
+      <app-child-form
+        *ngFor="let child of children; let i = index"
+        [childIndex]="i"
+        [showLegend]="children.length > 1"
+        [isLast]="i === children.length - 1"
+        (promptForAdditionalChildren)="onPromptForAdditionalChanges()"
+        (cancelAdditionalChild)="onCancelAdditionalChild()"
+        (removeChild)="onRemoveChild($event)"
+        (saveChild)="onSaveChild($event)">
+      </app-child-form>
+    </div>
+    <app-additional-children-prompt
+      *ngIf="promptForAdditionalChildren"
+      (hasOtherChildrenChanged)="onHasOtherChildrenChanged($event)">
+    </app-additional-children-prompt>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<fieldset class="pa0 fieldset" [ngClass]="{ 'editMode': isLast && !saved, 'saved': saved, 'isLast': isLast }">
+  <div class="fl tr pr3" style="padding-right: 21px; width: 220px; padding-top: 10px" *ngIf="(showLegend || (isLast && saved))">
+    <span class="b db legend" style="color: #616161; margin-bottom: 2px; font-size: 15px">{{ indexTranslations[childIndex] }} Child</span>
+    <a style="color: #939ea3; cursor: pointer" (mouseover)="onRollOverRemove()" (click)="onRemoveChild()">Remove</a>
+  </div>
+  <div class="fl pl2 fields" style="padding-left: 20px;" [ngClass]="{ 'border-left': (showLegend || (isLast && saved)), 'w-100': !(showLegend || (isLast && saved)), 'w-754': (showLegend || (isLast && saved)) }">
+    <div class="db">
+      <div class="dib" style="width: 220px; margin-right: 15px; padding-top: 10px">
+        <app-form-field
+          label="First name*">
+        </app-form-field>
+      </div>
+      <div class="dib" style="width: 220px; padding-top: 10px">
+        <app-form-field
+          label="Last name*">
+        </app-form-field>
+      </div>
+    </div>
+    <div class="db buttons fr" style="margin-right: 19px; margin-top: 20px" *ngIf="isLast && !saved">
+      <button (click)="cancel()" class="dib" class="cancel btn">Cancel</button>
+      <button (click)="submit()" class="dib" class="submit btn">Save</button>
+    </div>
+  </div>
+</fieldset>

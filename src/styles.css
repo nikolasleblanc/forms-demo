@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('assets/fonts/proxima_nova_regular-webfont.woff2') format('woff2'),
+         url('assets/fonts/proxima_nova_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_rgbold';
+    src: url('assets/fonts/proxima_nova_bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/proxima_nova_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_ththin';
+    src: url('assets/fonts/proxima_nova_thin-webfont.woff2') format('woff2'),
+         url('assets/fonts/proxima_nova_thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
