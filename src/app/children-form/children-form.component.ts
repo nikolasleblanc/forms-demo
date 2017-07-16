@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 const childObject = {};
 
 @Component({
-  selector: 'app-children',
-  templateUrl: './children.component.html',
-  styleUrls: ['./children.component.css']
+  selector: 'app-children-form',
+  templateUrl: './children-form.component.html',
+  styleUrls: ['./children-form.component.css']
 })
-export class ChildrenComponent implements OnInit {
+export class ChildrenFormComponent implements OnInit {
 
   hasChildren: boolean = false;
   promptForAdditionalChildren = false;

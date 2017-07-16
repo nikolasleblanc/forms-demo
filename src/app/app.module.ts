@@ -2,21 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ChildrenComponent } from './children/children.component';
+import { ChildrenFormComponent } from './children-form/children-form.component';
 import { FormFieldComponent } from './form-field/form-field.component';
 import { ChildFormComponent } from './child-form/child-form.component';
-import { ChildPromptComponent } from './child-prompt/child-prompt.component';
-import { AdditionalChildrenPromptComponent } from './additional-children-prompt/additional-children-prompt.component';
 import { BooleanPromptComponent } from './boolean-prompt/boolean-prompt.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildrenComponent,
+    ChildrenFormComponent,
     FormFieldComponent,
     ChildFormComponent,
-    ChildPromptComponent,
-    AdditionalChildrenPromptComponent,
     BooleanPromptComponent
   ],
   imports: [
