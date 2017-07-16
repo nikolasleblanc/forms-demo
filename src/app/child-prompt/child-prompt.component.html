@@ -1,7 +1,11 @@
-<p class="question di">Do you have any children?</p>
+<p class="question di">{{ question }}</p>
 <div class="radio di ml15">
-  <input id="hasChildren_yes" type="radio" name="hasChildren" value="true" (change)="hasChildrenChanged.emit($event)">
-  <label for="hasChildren_yes" class="radioLabel">Yes</label>
-  <input id="hasChildren_no" type="radio" name="hasChildren" value="false" (change)="hasChildrenChanged.emit($event)">
-  <label for="hasChildren_no" class="radioLabel">No</label>
+  <div class="dib radio-button-container">
+    <input id="question_yes" type="radio" name="question" value="true" (change)="selectionChanged.emit($event)">
+    <label for="question_yes" class="radio-label">Yes</label>
+  </div>
+  <div class="dib radio-button-container">
+    <input id="question_no" type="radio" name="question" value="false" (change)="selectionChanged.emit($event)">
+    <label for="question_no" class="radio-label">No</label>
+  </div>
 </div>

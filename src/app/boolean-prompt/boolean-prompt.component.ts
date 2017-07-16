@@ -1,15 +1,16 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-child-prompt',
-  templateUrl: './child-prompt.component.html',
-  styleUrls: ['./child-prompt.component.css']
+  selector: 'app-boolean-prompt',
+  templateUrl: './boolean-prompt.component.html',
+  styleUrls: ['./boolean-prompt.component.css']
 })
-export class ChildPromptComponent implements OnInit {
+export class BooleanPromptComponent implements OnInit {
 
   @Input() question: string = '';
   @Output() selectionChanged = new EventEmitter();
   @Output() hasChildrenChanged = new EventEmitter();
+  guid: string = Date.now().toString();
 
   constructor() { }
 

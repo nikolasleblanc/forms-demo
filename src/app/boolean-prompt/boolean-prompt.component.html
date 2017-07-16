@@ -1,0 +1,11 @@
+<p class="question di">{{ question }}</p>
+<div class="radio di ml15">
+  <div class="dib radio-button-container">
+    <input id="{{guid}}_question_yes" type="radio" name="{{guid}}_question" value="true" (change)="selectionChanged.emit($event)">
+    <label for="{{guid}}_question_yes" class="radio-label">Yes</label>
+  </div>
+  <div class="dib radio-button-container">
+    <input id="{{guid}}_question_no" type="radio" name="{{guid}}_question" value="false" (change)="selectionChanged.emit($event)">
+    <label for="{{guid}}_question_no" class="radio-label">No</label>
+  </div>
+</div>

@@ -1,9 +1,10 @@
 <div style="margin-left: 150px; width: 980px; margin-right: 150px">
   <h1>Children</h1>
   <div class="mb15">
-    <app-child-prompt
-      (hasChildrenChanged)="onHasChildrenChanged($event)">
-    </app-child-prompt>
+    <app-boolean-prompt
+      question="Do you have any children?"
+      (selectionChanged)="onHasChildrenChanged($event)">
+    </app-boolean-prompt>
   </div>
   <div *ngIf="children.length > 0">
     <div  class="childFormContainer" [ngClass]="{ 'editMode': children.length === 1 && !savedChild }">
@@ -19,9 +20,10 @@
         (saveChild)="onSaveChild($event)">
       </app-child-form>
     </div>
-    <app-additional-children-prompt
+    <app-boolean-prompt
       *ngIf="promptForAdditionalChildren"
-      (hasOtherChildrenChanged)="onHasOtherChildrenChanged($event)">
-    </app-additional-children-prompt>
+      question="Do you have any other children?"
+      (selectionChanged)="onHasOtherChildrenChanged($event)">
+    </app-boolean-prompt>
   </div>
 </div>

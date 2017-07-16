@@ -7,6 +7,7 @@ import { FormFieldComponent } from './form-field/form-field.component';
 import { ChildFormComponent } from './child-form/child-form.component';
 import { ChildPromptComponent } from './child-prompt/child-prompt.component';
 import { AdditionalChildrenPromptComponent } from './additional-children-prompt/additional-children-prompt.component';
+import { BooleanPromptComponent } from './boolean-prompt/boolean-prompt.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AdditionalChildrenPromptComponent } from './additional-children-prompt/
     FormFieldComponent,
     ChildFormComponent,
     ChildPromptComponent,
-    AdditionalChildrenPromptComponent
+    AdditionalChildrenPromptComponent,
+    BooleanPromptComponent
   ],
   imports: [
     BrowserModule
